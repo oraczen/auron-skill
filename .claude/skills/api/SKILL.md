@@ -58,3 +58,42 @@ Note: Always ask user about environment they want to use and based on that make 
 For example in `dev` env the base url for openapi.json file is `https://dev.useauron.ai/api/v1/openapi.json`
 
 Always run the above command to fetch fresh copy of openapi.json file and use grep to find relevant endpoints and call them as per users need.
+
+# Storage and User Prefrences
+
+To store and read user prefrences such as env, token and API keys use the `storage.js` file.
+
+Useage: `node storage.js {{action_name}} {{data}}`
+
+Supported action_name:
+
+- `getConfiguration`: To read configuration
+- `setConfiguration`: To set update key configuration
+
+For Example:
+
+To read user configuration:
+
+```bash
+node storage.js getConfiguration
+```
+
+Output:
+
+```json
+{
+    "env:" dev, // Selected environment for API calls,
+    "authentication": {
+        "apiKey": "xxxx" // User's API Key
+    },
+    "state": { // State Object for key value pair storage
+        "organizationId": "xxx", // user's selected organization id,
+    }
+}
+```
+
+To set user configuration:
+
+```bash
+node storage.js setConfiguration "{ "env": "dev" }"
+```
