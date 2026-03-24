@@ -33,7 +33,17 @@ User can interact with agents on multiple channels such as chat text to text, vo
 
 Agents can listen and respond back to the user based on instuctions given to it while configuring agent.
 
-### Entites
+### Entities
+
+Entities are like database tables for your agents. Each entity represents a type of thing you want to track — customer leads, support tickets, deal pipelines, inventory items, or anything else.
+
+When you create an entity, it starts with three default columns: ID, Name, and Description. You can then add more columns to define the shape of your data. Each column has a type — text, number, email, URL, boolean, single select, or multi select — so the data stays clean and structured.
+
+Entities can be linked to meetings and conversations to give agents context about what the discussion is about. For example, if you have a "Leads" entity, you can attach a specific lead to a meeting so the agent knows who you are talking about and can update the record after the conversation.
+
+Teams and individual users can be given access to entities. The person who creates an entity owns it and can update or delete it. Others can be added as viewers.
+
+Use the `entity` skill for full API details on creating and managing entities and their columns.
 
 ### Knowledge Stores
 
