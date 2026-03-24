@@ -45,6 +45,18 @@ Teams and individual users can be given access to entities. The person who creat
 
 Use the `entity` skill for full API details on creating and managing entities and their columns.
 
+### Entity Records
+
+Entity records are the actual rows of data inside an entity. If an entity is "Customer Leads", then each individual lead is one entity record.
+
+Each record stores values that match the entity's columns. For example, if your entity has columns for Name (text), Email (email), and Deal Size (number), then a record would have a value for each of those columns with the right data type.
+
+Records can be created one at a time through the API, or in bulk by uploading a CSV file. You can also attach labels to records for easy filtering and categorization.
+
+Records have their own access control. The person who creates a record owns it. You can share individual records with specific users or entire teams as viewers.
+
+Use the `entity-record` skill for full API details on creating, updating, and managing records.
+
 ### Knowledge Stores
 
 ### Signals
