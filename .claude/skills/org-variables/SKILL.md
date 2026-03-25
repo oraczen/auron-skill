@@ -14,21 +14,11 @@ Organization Variables have 3 types that you can configure:
 - Secret - This is an encrypted variable that is kept and used but can not be seen by anyone and is a secret . 
 - LLM Configuration - This is also an encrypted variable used to store personal API keys of different providers which then can be used to configure Agents 
 
+Type should not be altered after creation , you will not be able to see secret and llm configuration's api key but you can update them and delete them .
+
 ## API Endpoints
 
 All endpoints are under the base path `/organizations/variables`. Refer to the OpenAPI spec for full request/response schemas.
-
-### Organization Variable Crud
-
-| Method | Path                  | Description                                                                                         |
-| ------ | --------------------- | --------------------------------------------------------------------------------------------------- |
-| POST   | `/organizations/variables/create`    | Create a new organization variable (API key, LLM config, etc.)                                                                                 |
-| GET   | `/organizations/variables/list`      | List all variables for an organization, optionally filtered by type |
-| GET    | `/organizations/variables/get-by-id` | Retrieve a specific organization variable by its ID                                                                                   |
-| PUT    | `/organizations/variables/update`    | Update an existing organization variable                                        |
-| DELETE | `/organizations/variables/delete`    | Delete an organization variable by its ID                                                     |
-
-* Important Note: Type of variable is set while creating only and can not be updated after creation.
 
 ## Rules
 
