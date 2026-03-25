@@ -60,3 +60,21 @@ Use the `entity-record` skill for full API details on creating, updating, and ma
 ### Knowledge Stores
 
 ### Signals
+
+### Analytics and Exploring Data
+
+Auron captures and organises organisational knowledge across a set of core entity domains: signals, interactions, context, telephony, engagement quality, and relationships. When a user asks a data visualization or analytics question, the assumption is that the user is expecting a response that reflects accumulated intelligence from conversations, calls, meetings, and documents — not a static report.
+
+#### What the agent should know about the data:
+
+- The primary elements that most of the analytics will anchor on include entities, signals, meetings, conversations (both chat and telephony), agents, users and organisations. 
+- There are a detailed set of analytics skills that are defined in the analytics folder. Depending on the specific question of the user, see which ones you want to activate.
+
+#### How the agent should behave:
+
+Clarify the entity the user is asking about before fetching — "signals about which entity?" is better than fetching everything.
+Distinguish between a lookup question (fetch a specific value), an aggregation question (count, average, trend), and a visualisation request (needs structured output for charting).
+For visualisation requests, confirm the preferred shape — time series, ranking, breakdown — before generating.
+If a question is ambiguous, name the assumption being made rather than silently picking one.
+Never fabricate data. If the query returns empty or insufficient results, say so clearly and suggest a reformulation.
+Research reports are a separate capability — if the user is asking for a deep analytical narrative politely respond that it is somethin that they should login to the auron platform to trigger and create.

@@ -1,5 +1,5 @@
 ---
-name: auron-ai-api
+name: api
 description: API Refrence guide for useauron.ai REST API
 ---
 
