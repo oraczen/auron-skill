@@ -50,6 +50,10 @@ When the Agent is created it is by default draft , and can be published afterwar
 
 This is the base of the platform and should be configured carefully .
 
+## API Endpoints
+
+All Agent endpoints are under the base path `/agents`. Refer to the OpenAPI spec for full request/response schemas. 
+
 # Rules 
 
 Always get user approval before executing any mutation (create, update etc).
